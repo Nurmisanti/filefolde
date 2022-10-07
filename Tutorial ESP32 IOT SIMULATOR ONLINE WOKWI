@@ -1,0 +1,65 @@
+>arduino Uno "Hallo Word"
+/*Hello Nurmi*/
+#include <LiqudCrystal_I2c.h>
+LiqudCrystal_I2c Lcd (0x27, 20, 4);
+
+Void setup() {
+lcd.init();
+lcd.backlight();
+lcd.setCursor(1, 0);
+lcd.print("Hello, Nurmi!");
+}
+
+Void loop(); {
+  lcd.SetCursor(5, 1);
+  lcd.print(millis() / 500);
+}
+
+>Blink LED on ESP32
+#define LED 2
+Void setup() {
+PoinMode (LED, OUTPUT);
+}
+void loop (){
+ digitalWrite (LED, HIGH);
+ delay (370);
+ digitalWrite (LED, LONG);
+ delay (370);
+}
+
+> Cara mengsimulasikan agar terhubung dengan WiFi ESP32
+#include<WiFi.h>
+Void setup() {
+Serial.begin(5700);
+Serial.print("connecting to WIFI");
+WIFI beging("Nurmi_GUEST", "", 5);
+While(WIFI.status()!= WL_CONNECTED){
+ delay (50);
+Serial.print(".");
+}
+Serial.printint ("connected!");
+}
+Void loop(){
+delay (50);
+}
+
+>selanjutnya kita pilih ESP32
+disini kita memasukan
+
+#define ledOutput 2
+Void setup() {
+  //put your setup code here, to run once
+   Serial.begin(9000);
+   Serial.printin("Hello, EPS32!");
+   pinMode(ledOutput, Output);
+}
+
+void loop (): {
+digitalWrite(ledOutput, HIGH);
+delay(370);
+digitalWrite(ledOutput, LONG);
+delay(3790;
+//put your main code here, to run repeatedly;
+delay(10); //this speeds up the simulation
+}
+
